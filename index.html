@@ -685,6 +685,7 @@ const QUESTIONS = {
 // --------------------------
 // SHOW / HIDE PAGES
 // --------------------------
+
 function hideAllPages() {
   document.getElementById("home").classList.add("hide");
   document.getElementById("namePage").classList.add("hide");
@@ -715,7 +716,7 @@ function saveQuizState() {
     timeLeft
   };
   localStorage.setItem("quizState", JSON.stringify(state));
-  }
+}
 
 window.onload = () => {
   const savedState = localStorage.getItem("quizState");
@@ -731,10 +732,14 @@ window.onload = () => {
 
   document.getElementById("subjectTitle").innerText = currentSubject;
   showPage("quiz");
-  startTimer();
   loadQuestion();
+
+  // Only start timer if time is left
+  if (timeLeft > 0) {
+    startTimer();
+  }
 };
-  
+
 function saveName() {
   const name = document.getElementById("nameInput").value.trim();
   if (!name) {
@@ -745,7 +750,7 @@ function saveName() {
   showPage("subjectPage");
 }
 
-function selectSubject(subject) {
+function selectSubject(subject, event) {
   currentSubject = subject;
 
   document.querySelectorAll(".subject-btn").forEach(btn => {
@@ -812,8 +817,7 @@ function loadQuestion() {
 
   document.getElementById("questionNumber").innerText = `Question ${currentIndex + 1} / ${questions.length}`;
 
-
-  document.getElementById("questionText").innerText = q.q;
+  document.getElementById("questionText").innerHTML = q.q;
   const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
 
@@ -821,7 +825,7 @@ function loadQuestion() {
     const letter = String.fromCharCode(65 + index);
     const optionEl = document.createElement("div");
     optionEl.className = "option";
-    optionEl.innerText = `${letter}. ${opt}`;
+    optionEl.innerHTML = `${letter}. ${opt}`;
 
     if (answers[currentIndex] === letter) {
       optionEl.classList.add("selected");
@@ -865,7 +869,6 @@ function nextQuestion() {
 function finishQuiz() {
   localStorage.removeItem("quizState");
   clearInterval(timerInterval);
-  
 
   const questions = QUESTIONS[currentSubject];
   let score = 0;
@@ -882,44 +885,44 @@ function finishQuiz() {
   document.getElementById("percentCircle").innerText = `${percent}%`;
 
   const answerList = document.getElementById("answerList");
-answerList.innerHTML = "<h3>Review Answers</h3>";
+  answerList.innerHTML = "<h3>Review Answers</h3>";
 
-questions.forEach((q, index) => {
-  const studentAns = answers[index] || "Not answered";
-  const correctLetter = q.a;
-  const correctText = q.o[correctLetter.charCodeAt(0) - 65];
+  questions.forEach((q, index) => {
+    const studentAns = answers[index] || "Not answered";
+    const correctLetter = q.a;
+    const correctText = q.o[correctLetter.charCodeAt(0) - 65];
 
-  let studentText = "Not answered";
-  if (studentAns !== "Not answered") {
-    studentText = q.o[studentAns.charCodeAt(0) - 65];
-  }
+    let studentText = "Not answered";
+    if (studentAns !== "Not answered") {
+      studentText = q.o[studentAns.charCodeAt(0) - 65];
+    }
 
-  if (studentAns === correctLetter) {
-    answerList.innerHTML += `
-      <p><strong>Q${index + 1}.</strong> ${q.q}</p>
-      <p>
-        Answer: ${studentText} - ${studentAns}
-        <span class="correct"> Correct ✅</span>
-      </p>
-      <hr>
-    `;
-  } else {
-    answerList.innerHTML += `
-      <p><strong>Q${index + 1}.</strong> ${q.q}</p>
-      <p>
-        Answer: ${studentText} - ${studentAns}
-        <span class="wrong"> Wrong ❌</span>
-      </p>
-      <p>
-        Correct Answer: ${correctText} - ${correctLetter}
-      </p>
-      <hr>
-    `;
-  }
-});
+    if (studentAns === correctLetter) {
+      answerList.innerHTML += `
+        <p><strong>Q${index + 1}.</strong> ${q.q}</p>
+        <p>
+          Answer: ${studentText} - ${studentAns}
+          <span class="correct"> Correct ✅</span>
+        </p>
+        <hr>
+      `;
+    } else {
+      answerList.innerHTML += `
+        <p><strong>Q${index + 1}.</strong> ${q.q}</p>
+        <p>
+          Answer: ${studentText} - ${studentAns}
+          <span class="wrong"> Wrong ❌</span>
+        </p>
+        <p>
+          Correct Answer: ${correctText} - ${correctLetter}</p>
+        <hr>
+      `;
+    }
+  });
 
   showPage("result");
-}
+  }
+  
 </script>
 </body>
 </html>
