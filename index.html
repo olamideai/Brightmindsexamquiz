@@ -1231,25 +1231,19 @@ function saveQuizState() {
 
 window.onload = () => {
   const savedState = localStorage.getItem("quizState");
-  const currentPage = localStorage.getItem("currentPage");
+  if (!savedState) return;
 
-  if (savedState && currentPage === "quiz") {
-    const state = JSON.parse(savedState);
+  const state = JSON.parse(savedState);
 
-    studentName = state.studentName;
-    currentSubject = state.currentSubject;
-    currentIndex = state.currentIndex;
-    answers = state.answers;
-    timeLeft = state.timeLeft;
+  studentName = state.studentName;
+  currentSubject = state.currentSubject;
+  currentIndex = state.currentIndex;
+  answers = state.answers;
+  timeLeft = state.timeLeft;
 
-    document.getElementById("subjectTitle").innerText = currentSubject;
-    showPage("quiz");
-    startTimer();
-    loadQuestion();
-  } else {
-    showPage("home");
-  }
-};
+  document.getElementById("subjectTitle").innerText = currentSubject;
+  showPage("quiz");
+  loadQuestion();
 
   // Only start timer if time is left
   if (timeLeft > 0) {
