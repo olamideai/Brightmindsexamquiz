@@ -1231,19 +1231,25 @@ function saveQuizState() {
 
 window.onload = () => {
   const savedState = localStorage.getItem("quizState");
-  if (!savedState) return;
+  const currentPage = localStorage.getItem("currentPage");
 
-  const state = JSON.parse(savedState);
+  if (savedState && currentPage === "quiz") {
+    const state = JSON.parse(savedState);
 
-  studentName = state.studentName;
-  currentSubject = state.currentSubject;
-  currentIndex = state.currentIndex;
-  answers = state.answers;
-  timeLeft = state.timeLeft;
+    studentName = state.studentName;
+    currentSubject = state.currentSubject;
+    currentIndex = state.currentIndex;
+    answers = state.answers;
+    timeLeft = state.timeLeft;
 
-  document.getElementById("subjectTitle").innerText = currentSubject;
-  showPage("quiz");
-  loadQuestion();
+    document.getElementById("subjectTitle").innerText = currentSubject;
+    showPage("quiz");
+    startTimer();
+    loadQuestion();
+  } else {
+    showPage("home");
+  }
+};
 
   // Only start timer if time is left
   if (timeLeft > 0) {
@@ -1357,8 +1363,8 @@ function loadQuestion() {
 
 function goHome() {
   if (confirm("Are you sure you want to go back home? Your quiz progress will be lost.")) {
-    localStorage.removeItem("quizState"); // optional but recommended
-    showPage("home"); // or whatever your home page id is
+    localStorage.removeItem("quizState"); // THIS IS THE FIX
+    showPage("home");
   }
   }
   
