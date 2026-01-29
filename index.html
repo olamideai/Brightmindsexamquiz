@@ -259,6 +259,7 @@
     <h2>Select Subject</h2>
     <p class="muted">Choose one subject only.</p>
     <div class="subjects">
+      <button class="subject-btn" onclick="selectSubject('BIO 101(3)')">BIO 101(3)</button>
       <button class="subject-btn" onclick="selectSubject('BIO 101,2')">BIO 101 (2)</button>
       <button class="subject-btn" onclick="selectSubject('MTH 101')">MTH 101</button>
       <button class="subject-btn" onclick="selectSubject('PHY 101')">PHY 101</button>
@@ -332,6 +333,69 @@ let studentName = "";
 // Example question set (You can update later)
 const QUESTIONS = {
 
+
+  "BIO 101(3)": [
+    { q: "Which process produces offspring that are genetically identical to the parent?", o: ["Sexual reproduction", "Asexual reproduction", "Internal fertilization", "Viviparity"], a: "B" },
+    { q: "A hydra producing a small growth that breaks off to become a new individual is an example of:", o: ["Binary fission", "Fragmentation", "Budding", "Vegetative propagation"], a: "C" },
+    { q: "What is the primary advantage of sexual reproduction over asexual reproduction?", o: ["It is faster", "It only requires one parent", "It produces genetic diversity", "It requires less energy"], a: "C" },
+    { q: "In which type of development does the embryo develop inside an egg kept within the mother's body, but without a placental connection?", o: ["Oviparity", "Viviparity", "Ovoviviparity", "Fragmentation"], a: "C" },
+    { q: "Humans are categorized as ________ because we give birth to live young nourished by a placenta.", o: ["Oviparous", "Viviparous", "Ovoviviparous", "Asexual"], a: "B" },
+    { q: "External fertilization is most common in which environment?", o: ["Deserts", "Forests", "Aquatic environments", "High mountains"], a: "C" },
+    { q: "Which of the following is an example of vegetative propagation?", o: ["A bacteria splitting in two", "A starfish growing a new arm", "A strawberry plant growing runners", "A bird laying an egg"], a: "C" },
+    { q: "The fusion of a sperm and an egg is called:", o: ["Fission", "Fertilization", "Budding", "Speciation"], a: "B" },
+    { q: "Birds laying hard-shelled eggs is an example of:", o: ["Oviparity", "Viviparity", "Ovoviviparity", "Mutualism"], a: "A" },
+    { q: "Which of these organisms reproduces via binary fission?", o: ["Yeast", "Bacteria", "Sharks", "Humans"], a: "B" },
+    { q: "Who proposed the theory of Natural Selection?", o: ["Charles Darwin", "Gregor Mendel", "Alfred Wegener", "Louis Pasteur"], a: "B" },
+    { q: "What is the primary source of brand-new genetic traits in a population?", o: ["Natural selection", "Mutation", "Competition", "Adaptation"], a: "B" },
+    { q: "\"Survival of the fittest\" means survival of the organisms that are:", o: ["The strongest and fastest", "The largest in size", "Best adapted to their current environment", "The most aggressive"], a: "C" },
+    { q: "Homologous structures, like the arm of a human and the wing of a bat, suggest:", o: ["They live in the same environment", "They have a common ancestor", "They do not evolve", "They are the same species"], a: "B" },
+    { q: "Small-scale changes within a single population (like antibiotic resistance) are called:", o: ["Macroevolution", "Speciation", "Microevolution", "Mutation"], a: "C" },
+    { q: "Which era is known as the \"Age of Reptiles\"?", o: ["Paleozoic", "Cenozoic", "Mesozoic", "Precambrian"], a: "C" },
+    { q: "The sudden burst of life 541 million years ago is known as the:", o: ["Big Bang", "Cambrian Explosion", "Oxygen Revolution", "K-Pg Extinction"], a: "B" },
+    { q: "Which of the following is NOT a driver of evolution?", o: ["Genetic Drift", "Gene Flow", "Natural Selection", "Asexual cloning without mutation"], a: "D" },
+    { q: "When two populations are separated by a mountain and evolve into different species, it is called:", o: ["Commensalism", "Speciation", "Adaptation", "Symbiosis"], a: "B" },
+    { q: "Humans share a common ancestor with chimpanzees. This is an example of:", o: ["Direct descent", "Phylogeny", "Amensalism", "Binary fission"], a: "B" },
+    { q: "Which level of organization includes both living (biotic) and non-living (abiotic) factors?", o: ["Population", "Community", "Ecosystem", "Organism"], a: "C" },
+    { q: "An interaction where both species benefit (+/+) is called:", o: ["Parasitism", "Commensalism", "Mutualism", "Amensalism"], a: "C" },
+    { q: "A tick drinking blood from a dog is an example of which sign?", o: ["(+/+)", "(+/0)", "(+/-)", "(-/-)"], a: "C" },
+    { q: "In the sign system, Competition is represented by:", o: ["(+/+)", "(0/-)", "(+/-)", "(-/-)"], a: "B" },
+    { q: "A \"Keystone Species\" is one that:", o: ["Is the smallest in the ecosystem", "Has a disproportionately large impact on its environment", "Only eats plants", "Is extinct"], a: "B" },
+    { q: "Organisms that break down dead matter and recycle nutrients are:", o: ["Producers", "Primary consumers", "Decomposers", "Apex predators"], a: "C" },
+    { q: "A remora fish riding on a shark to get scraps of food without affecting the shark is:", o: ["Mutualism", "Parasitism", "Commensalism", "Predation"], a: "C" },
+    { q: "What is the original source of energy for almost all food webs?", o: ["Water", "Soil", "Sunlight", "Oxygen"], a: "C" },
+    { q: "An elephant crushing insects accidentally while walking is an example of:", o: ["Amensalism (0/-)", "Mutualism (+/+)", "Competition (-/-)", "Predation (+/-)"], a: "A" },
+    { q: "The specific role or \"job\" an organism has in its environment is its:", o: ["Habitat", "Niche", "Trophic level", "Biosphere"], a: "B" },
+    { q: "Who was the first person to observe and name \"cells\" in 1665?", o: ["Anton van Leeuwenhoek", "Robert Hooke", "Matthias Schleiden", "Rudolf Virchow"], a: "B" },
+    { q: "Which tenet was added to the Cell Theory by Rudolf Virchow?", o: ["All plants are made of cells", "Cells are the basic unit of life", "All cells arise from pre-existing cells", "Cells contain DNA"], a: "C" },
+    { q: "Which of the following is found in both prokaryotic and eukaryotic cells?", o: ["Mitochondria", "Nucleus", "Ribosomes", "Endoplasmic Reticulum"], a: "C" },
+    { q: "The genetic material in a bacterial cell is located in the:", o: ["Nucleolus", "Nucleus", "Nucleoid", "Capsule"], a: "C" },
+    { q: "Which organelle is responsible for the detoxification of chemicals and lipid synthesis?", o: ["Rough ER", "Smooth ER", "Golgi Apparatus", "Lysosome"], a: "B" },
+    { q: "If a cell’s lysosomes were to burst, what would most likely happen?", o: ["The cell would divide", "The cell would produce more energy", "The cell would digest itself", "The cell would become a plant cell"], a: "C" },
+    { q: "Which organelle is known as the \"Post Office\" of the cell?", o: ["Mitochondria", "Vacuole", "Golgi Apparatus", "Nucleus"], a: "C" },
+    { q: "In plant cells, turgor pressure is maintained by the:", o: ["Cell Wall", "Chloroplast", "Large Central Vacuole", "Cytoskeleton"], a: "C" },
+    { q: "The primary component of a bacterial cell wall is:", o: ["Cellulose", "Chitin", "Peptidoglycan", "Glycogen"], a: "C" },
+    { q: "Which organelle contains its own DNA and is used for energy conversion?", o: ["Ribosome", "Mitochondria", "Lysosome", "Centriole"], a: "B" },
+    { q: "Which of the following is the correct order of the taxonomic hierarchy?", o: ["Kingdom, Phylum, Class, Order, Family, Genus, Species", "Domain, Kingdom, Order, Class, Phylum, Genus, Species", "Kingdom, Class, Phylum, Order, Genus, Family, Species", "Domain, Phylum, Kingdom, Family, Order, Genus, Species"], a: "A" },
+    { q: "Organisms that live in extreme environments like hot springs belong to which Domain?", o: ["Bacteria", "Eukarya", "Archaea", "Protozoa"], a: "C" },
+    { q: "What is the \"address\" or physical location where an organism lives called?", o: ["Niche", "Habitat", "Biome", "Community"], a: "B" },
+    { q: "A freshwater habitat with moving water (like a river) is classified as:", o: ["Lentic", "Lotic", "Marine", "Intertidal"], a: "B" },
+    { q: "Which Kingdom consists of multicellular eukaryotic decomposers?", o: ["Plantae", "Protista", "Fungi", "Animalia"], a: "C" },
+    { q: "Bears, which eat both berries and fish, are classified as:", o: ["Herbivores", "Carnivores", "Omnivores", "Detritivores"], a: "C" },
+    { q: "Abiotic factors in a habitat include:", o: ["Predators and Prey", "Bacteria and Fungi", "Sunlight and Temperature", "Trees and Grass"], a: "C" },
+    { q: "The \"Binomial Nomenclature\" system uses which two categories for a scientific name?", o: ["Kingdom and Phylum", "Genus and Species", "Family and Genus", "Order and Class"], a: "B" },
+    { q: "Which habitat covers approximately 70% of the Earth's surface?", o: ["Tropical Rainforest", "Marine", "Desert", "Tundra"], a: "B" },
+    { q: "A microhabitat could be represented by:", o: ["The entire Amazon Rainforest", "The Atlantic Ocean", "The space under a rotting log", "The Sahara Desert"], a: "C" },
+    { q: "Which ground tissue is living at maturity and has unevenly thickened primary walls?", o: ["Parenchyma", "Sclerenchyma", "Collenchyma", "Xylem"], a: "C" },
+    { q: "The \"gritty\" texture found in pears is caused by which type of cell?", o: ["Fibers", "Sclereids", "Guard Cells", "Parenchyma"], a: "B" },
+    { q: "Which tissue is primarily responsible for photosynthesis in leaves?", o: ["Sclerenchyma", "Collenchyma", "Parenchyma", "Phloem"], a: "C" },
+    { q: "Sclerenchyma cells are unique because they are:", o: ["Dead at maturity", "Found only in roots", "Used for water transport", "Always green"], a: "A" },
+    { q: "The strings in celery are an example of:", o: ["Sclerenchyma", "Parenchyma", "Collenchyma", "Epidermis"], a: "A" },
+    { q: "Which of the following is a level of organization directly above \"Tissue\"?", o: ["Cell", "Organ", "Organ System", "Organism"], a: "B" },
+    { q: "Red blood cells are shaped like biconcave discs to:", o: ["Move faster through the heart", "Increase surface area for oxygen transport", "Protect the nucleus", "Store more glucose"], a: "B" },
+    { q: "Lignin is a complex polymer found in the secondary walls of:", o: ["Parenchyma", "Collenchyma", "Sclerenchyma", "Meristems"], a: "C" },
+    { q: "Which of these cells lack a nucleus at maturity to carry more oxygen?", o: ["Mammalian red blood cells", "Nerve cells", "Muscle cells", "Sperm cells"], a: "B" },
+    { q: "Bacteria reproduce asexually through a process called:", o: ["Mitosis", "Meiosis", "Binary Fission", "Budding"], a: "C" }
+  ],
 
 
 
