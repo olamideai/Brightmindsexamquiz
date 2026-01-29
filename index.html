@@ -246,6 +246,7 @@
     <h2>Select Subject</h2>
     <p class="muted">Choose one subject only.</p>
     <div class="subjects">
+      <button class="subject-btn" onclick="selectSubject('BIO 101,2')">BIO 101 (2)</button>
       <button class="subject-btn" onclick="selectSubject('MTH 101')">MTH 101</button>
       <button class="subject-btn" onclick="selectSubject('PHY 101')">PHY 101</button>
       <button class="subject-btn" onclick="selectSubject('CHM 101')">CHM 101</button>
@@ -314,6 +315,218 @@ let studentName = "";
 
 // Example question set (You can update later)
 const QUESTIONS = {
+
+
+
+
+  "BIO 101,2": [
+    {
+      q: "Who first observed living cells and called them \"animalcules\"?",
+      o: ["Robert Hooke", "Antonie van Leeuwenhoek", "Rudolf Virchow", "Robert Brown"],
+      a: "B"
+    },
+    {
+      q: "The Cell Theory states that all cells arise from:",
+      o: ["Non-living matter", "Spontaneous generation", "Pre-existing cells", "Protein synthesis"],
+      a: "C"
+    },
+    {
+      q: "Which organelle is considered the control center of the cell?",
+      o: ["Mitochondria", "Ribosome", "Nucleus", "Golgi Apparatus"],
+      a: "C"
+    },
+    {
+      q: "Which shape is characteristic of a human red blood cell?",
+      o: ["Star-shaped", "Long and fibrous", "Biconcave disc", "Spiral"],
+      a: "C"
+    },
+    {
+      q: "Organisms consisting of a single cell that performs all life functions are:",
+      o: ["Multicellular", "Unicellular", "Specialized", "Tissues"],
+      a: "B"
+    },
+    {
+      q: "The theory that mitochondria were once free-living bacteria is called:",
+      o: ["Cell Theory", "Evolution", "Endosymbiotic Theory", "Gene Theory"],
+      a: "C"
+    },
+    {
+      q: "What is the function of the cell wall in plants?",
+      o: ["Energy production", "Structural support", "Protein synthesis", "Digestion"],
+      a: "B"
+    },
+    {
+      q: "Which of these is the correct hierarchy of organization?",
+      o: ["Tissue → Cell → Organ", "Cell → Tissue → Organ", "Organ → Cell → Tissue", "Cell → Organ → Tissue"],
+      a: "B"
+    },
+    {
+      q: "Nerve cells have long axons primarily to:",
+      o: ["Store fat", "Transmit signals over distances", "Absorb sunlight", "Contract muscles"],
+      a: "B"
+    },
+    {
+      q: "The fluid-like substance that fills the cell is called:",
+      o: ["Nucleus", "Cytoplasm", "Cell wall", "Vacuole"],
+      a: "B"
+    },
+
+    {
+      q: "How many pairs of chromosomes do humans typically have?",
+      o: ["46", "23", "44", "22"],
+      a: "B"
+    },
+    {
+      q: "A specific segment of DNA that codes for a protein is a:",
+      o: ["Chromosome", "Gene", "Allele", "Histone"],
+      a: "B"
+    },
+    {
+      q: "Non-sex chromosomes (pairs 1–22) are known as:",
+      o: ["Allosomes", "Autosomes", "Gametes", "Zygotes"],
+      a: "B"
+    },
+    {
+      q: "The physical location of a gene on a chromosome is its:",
+      o: ["Locus", "Genotype", "Phenotype", "Allele"],
+      a: "A"
+    },
+    {
+      q: "A female human typically has which sex chromosome combination?",
+      o: ["XY", "YY", "XX", "XO"],
+      a: "C"
+    },
+    {
+      q: "DNA wraps around which proteins to stay organized?",
+      o: ["Enzymes", "Histones", "Hormones", "Antibodies"],
+      a: "B"
+    },
+    {
+      q: "Which chromosome is significantly smaller and carries fewer genes?",
+      o: ["X", "Y", "Chromosome 1", "Chromosome 21"],
+      a: "B"
+    },
+    {
+      q: "The complete set of genetic material in an organism is the:",
+      o: ["Genome", "Proteome", "Allele", "Pedigree"],
+      a: "A"
+    },
+    {
+      q: "Sister chromatids are held together at the:",
+      o: ["Telomere", "Centromere", "Locus", "Nucleus"],
+      a: "B"
+    },
+    {
+      q: "Which branch of genetics studies chromosomes under a microscope?",
+      o: ["Population genetics", "Cytogenetics", "Epigenetics", "Genomics"],
+      a: "B"
+    },
+
+    {
+      q: "Who is known as the Father of Genetics?",
+      o: ["Charles Darwin", "Gregor Mendel", "James Watson", "Thomas Morgan"],
+      a: "B"
+    },
+    {
+      q: "The observable physical trait of an organism is its:",
+      o: ["Genotype", "Phenotype", "Allele", "Zygote"],
+      a: "B"
+    },
+    {
+      q: "An organism with two different alleles (Tt) for a trait is:",
+      o: ["Homozygous", "Heterozygous", "Dominant", "Recessive"],
+      a: "B"
+    },
+    {
+      q: "In a monohybrid cross of Tt × Tt, what is the expected phenotype ratio?",
+      o: ["1:1", "9:3:3:1", "3:1", "4:0"],
+      a: "C"
+    },
+    {
+      q: "Which law states that alleles separate during gamete formation?",
+      o: ["Law of Dominance", "Law of Segregation", "Law of Independent Assortment", "Law of Gravity"],
+      a: "B"
+    },
+    {
+      q: "A dihybrid cross involves how many traits?",
+      o: ["1", "2", "3", "4"],
+      a: "B"
+    },
+    {
+      q: "What is the typical phenotype ratio of a dihybrid cross?",
+      o: ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
+      a: "C"
+    },
+    {
+      q: "An allele that is hidden unless two copies are present is:",
+      o: ["Dominant", "Recessive", "Codominant", "Mutation"],
+      a: "B"
+    },
+    {
+      q: "Mendel used which organism for his research?",
+      o: ["Fruit flies", "Pea plants", "Mice", "Bacteria"],
+      a: "B"
+    },
+    {
+      q: "The study of how environment affects gene expression without changing DNA is:",
+      o: ["Molecular genetics", "Epigenetics", "Phylogenetics", "Forensic genetics"],
+      a: "B"
+    },
+
+    {
+      q: "Using the FOIL method for genotype AaBb, which is a valid gamete?",
+      o: ["Aa", "Bb", "AB", "ABab"],
+      a: "C"
+    },
+    {
+      q: "A Punnett square for a dihybrid cross contains how many boxes?",
+      o: ["4", "8", "12", "16"],
+      a: "D"
+    },
+    {
+      q: "If B is dominant to b, what is the phenotype of Bb?",
+      o: ["Blue", "Light brown", "Brown", "Green"],
+      a: "C"
+    },
+    {
+      q: "Which process results in four genetically unique daughter cells?",
+      o: ["Mitosis", "Meiosis", "Binary fission", "Cloning"],
+      a: "B"
+    },
+    {
+      q: "The double helix structure of DNA was discovered by:",
+      o: ["Mendel", "Watson, Crick and Franklin", "Hooke", "Darwin"],
+      a: "B"
+    },
+    {
+      q: "Inheritance where one trait does not affect another is:",
+      o: ["Segregation", "Independent assortment", "Linkage", "Dominance"],
+      a: "B"
+    },
+    {
+      q: "A person with genotype XXY has a condition studied in:",
+      o: ["Transmission genetics", "Cytogenetics", "Population genetics", "Behavioral genetics"],
+      a: "B"
+    },
+    {
+      q: "Which cell type is a gamete?",
+      o: ["Skin cell", "Nerve cell", "Sperm cell", "Muscle cell"],
+      a: "C"
+    },
+    {
+      q: "The sum total of all genes in a population is the:",
+      o: ["Gene pool", "Genotype", "Phenotype", "Genome"],
+      a: "A"
+    },
+    {
+      q: "A permanent change in the DNA sequence is called a:",
+      o: ["Variation", "Mutation", "Translation", "Transcription"],
+      a: "B"
+    }
+  ],
+
+
+
   
   "PHY 101": [
   { q: "Which of the following is a fundamental physical quantity?", o: ["Force", "Velocity", "Mass", "Pressure"], a: "C" },
