@@ -1557,13 +1557,14 @@ function nextQuestion() {
 // --------------------------
 // RESULT
 // --------------------------
-function finishQuiz() {
+async function finishQuiz() {
   localStorage.removeItem("quizState");
   clearInterval(timerInterval);
 
   const questions = QUESTIONS[currentSubject];
   let score = 0;
 
+  // Calculate score
   questions.forEach((q, index) => {
     if (answers[index] === q.a) score++;
   });
@@ -1578,38 +1579,42 @@ function finishQuiz() {
   const answerList = document.getElementById("answerList");
   answerList.innerHTML = "<h3>Review Answers</h3>";
 
-  questions.forEach((q, index) => {
-    const studentAns = answers[index] || "Not answered";
+  // AI-powered explanations
+  for (let i = 0; i < questions.length; i++) {
+    const q = questions[i];
+    const studentAns = answers[i] || "Not answered";
     const correctLetter = q.a;
     const correctText = q.o[correctLetter.charCodeAt(0) - 65];
+    const studentText = studentAns !== "Not answered" ? q.o[studentAns.charCodeAt(0) - 65] : "Not answered";
 
-    let studentText = "Not answered";
+    let review = { feedback: "No explanation" };
+
     if (studentAns !== "Not answered") {
-      studentText = q.o[studentAns.charCodeAt(0) - 65];
+      try {
+        const res = await fetch("/api/review", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            question: q.q,
+            studentAnswer: studentText,
+            correctAnswer: correctText
+          })
+        });
+        const data = await res.json();
+        if (data.review) review = data.review;
+      } catch (err) {
+        console.error(err);
+      }
     }
 
-    if (studentAns === correctLetter) {
-      answerList.innerHTML += `
-        <p><strong>Q${index + 1}.</strong> ${q.q}</p>
-        <p>
-          Answer: ${studentText} - ${studentAns}
-          <span class="correct"> Correct ✅</span>
-        </p>
+    answerList.innerHTML += `
+      <div>
+        <p><strong>Q${i + 1}.</strong> ${q.q}</p>
+        <p>Your answer: ${studentText} ${studentAns !== "Not answered" ? `(${studentAns})` : ``}</p>
+        <p>${review.feedback}</p>
         <hr>
-      `;
-    } else {
-      answerList.innerHTML += `
-        <p><strong>Q${index + 1}.</strong> ${q.q}</p>
-        <p>
-          Answer: ${studentText} - ${studentAns}
-          <span class="wrong"> Wrong ❌</span>
-        </p>
-        <p>
-          Correct Answer: ${correctText} - ${correctLetter}</p>
-        <hr>
-      `;
-    }
-  });
+      </div>`;
+  }
 
   showPage("result");
   }
