@@ -1,7 +1,7 @@
 {
 "BIO 101(5)": [
 
-    // PART A: REPRODUCTION (1–25)
+    
 
     { q: "Which type of reproduction involves only one parent?", o: ["Sexual", "Asexual", "External", "Internal"], a: "B" },
     { q: "The fusion of male and female gametes is called:", o: ["Pollination", "Fertilization", "Germination", "Implantation"], a: "B" },
@@ -29,7 +29,7 @@
     { q: "Which organism reproduces by spore formation?", o: ["Frog", "Fern", "Bird", "Fish"], a: "B" },
     { q: "The process by which an embryo attaches to the uterus wall is called:", o: ["Fertilization", "Implantation", "Ovulation", "Menstruation"], a: "B" },
 
-    // PART B: EVOLUTION (26–50)
+
 
     { q: "Evolution is best defined as:", o: ["Change in body size", "Change in species over time", "Growth of organisms", "Development of embryos"], a: "B" },
     { q: "The scientist most associated with the theory of evolution is:", o: ["Newton", "Mendel", "Darwin", "Pasteur"], a: "C" },
@@ -57,5 +57,5 @@
     { q: "Which of the following supports Lamarck’s theory?", o: ["Use and disuse of organs", "Natural selection", "Mutation", "Speciation"], a: "A" },
     { q: "The term “survival of the fittest” refers to:", o: ["Physical strength", "Long lifespan", "Best adaptation to environment", "Largest size"], a: "C" }
 
-  ],
+  ]
     }
