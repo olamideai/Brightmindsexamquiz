@@ -1,4 +1,4 @@
-{
+
 "BIO 101(5)": [
 
     
@@ -58,4 +58,4 @@
     { q: "The term “survival of the fittest” refers to:", o: ["Physical strength", "Long lifespan", "Best adaptation to environment", "Largest size"], a: "C" }
 
   ]
-    }
+    
