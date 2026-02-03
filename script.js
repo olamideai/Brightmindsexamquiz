@@ -1283,7 +1283,8 @@ function bootstrap() {
       answers = data.answers;
       timeLeft = data.timeLeft;
       questions = QUESTION_BANK[currentSubject];
-
+       
+     document.getElementById("quizSubject").textContent = currentSubject;
       startTimer();
       renderQuestion();
       showPage("quiz");
