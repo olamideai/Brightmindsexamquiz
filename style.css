@@ -214,3 +214,19 @@ body {
   margin: 12px 0 8px 0;
   user-select: none;
 }
+
+#backHomeBtn {
+  background-color: #ff4d4d; /* red-ish to indicate quitting or going back */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px; /* some spacing from other buttons */
+  transition: background-color 0.3s ease;
+}
+
+#backHomeBtn:hover {
+  background-color: #e04343;
+      }
