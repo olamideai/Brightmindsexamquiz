@@ -1752,7 +1752,7 @@ const QUESTION_BANK = {
 
 const SUBJECT_TIME = {
    
-  "GNS 113": 60 × 15,
+  "GNS 113": 60 * 15,
   "PHY 101": 60 * 15,
   "CHM 101": 60 * 15,
   "MTH 101": 60 * 20,
