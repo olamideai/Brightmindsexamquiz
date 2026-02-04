@@ -562,7 +562,7 @@ const QUESTION_BANK = {
     },
     {
       q: "The number of particles in one mole of a substance is ______ (Avogadro’s number).",
-      o: { A: "6.02 × 10\u2072\u2072", B: "6.02 × 10\u2072\u2073", C: "1.6 × 10\u207B\u00B9\u2079", D: "3.0 × 10\u2078" },
+      o: { A: "6.02 × 10²²", B: "6.02 × 10²³", C: "1.6 × 10\u207B\u00B9\u2079", D: "3.0 × 10\u2078" },
       a: "B"
     },
     {
