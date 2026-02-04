@@ -514,7 +514,12 @@ const QUESTION_BANK = {
         D: "Two"
       },
       a: "D"
-    }
+    },
+     {
+        q: "The second R in SQ3R (study techniques) is .........",
+        o: { A: "Remember", B: "Recite", C: "Read", D: "Review "},
+        a: "B" 
+     }
   ],
 
   
