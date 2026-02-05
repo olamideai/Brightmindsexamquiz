@@ -2094,6 +2094,31 @@ const optionsBox = document.getElementById("options");
 const questionNumber = document.getElementById("questionNumber");
 const timerBox = document.getElementById("timer");
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menuBtn');
+  const sidebar = document.getElementById('sidebar');
+  const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+  const historyBtn = document.getElementById('historyBtn');
+  const historyContent = document.getElementById('historyContent');
+
+  menuBtn.addEventListener('click', () => {
+    sidebar.classList.remove('hide');
+    historyContent.classList.add('hide'); // hide history content initially
+  });
+
+  closeSidebarBtn.addEventListener('click', () => {
+    sidebar.classList.add('hide');
+  });
+
+  historyBtn.addEventListener('click', () => {
+    historyContent.classList.remove('hide');
+  });
+});
+
+
+
 /* ===============================
    4. PAGE NAVIGATION
 ================================ */
