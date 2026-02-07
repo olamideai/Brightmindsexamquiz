@@ -445,6 +445,90 @@ const QUESTION_BANK = {
       },
       "a": "C"
     }
+
+   
+  {
+    "q": "The electricity meters in houses measure energy units consumed in……",
+    "o": {
+      "A": "Volts",
+      "B": "Amperes",
+      "C": "Watts",
+      "D": "Kilowatt-hours"
+    },
+    "a": "D"
+  },
+  {
+    "q": "The tendency of a stationary body to continue to remain at rest when a force is applied to it is known as",
+    "o": {
+      "A": "Inertia",
+      "B": "Momentum",
+      "C": "Friction",
+      "D": "Acceleration"
+    },
+    "a": "A"
+  },
+  {
+    "q": "Which of the following quantities has the same unit as energy?",
+    "o": {
+      "A": "Power",
+      "B": "Work",
+      "C": "Force",
+      "D": "Impulse"
+    },
+    "a": "B"
+  },
+  {
+    "q": "Which of the following is not an example of force?",
+    "o": {
+      "A": "Tension",
+      "B": "Weight",
+      "C": "Mass",
+      "D": "Friction"
+    },
+    "a": "C"
+  },
+  {
+    "q": "Which of the following is not a conductor of electricity?",
+    "o": {
+      "A": "Human body",
+      "B": "Silver",
+      "C": "Glass",
+      "D": "Copper"
+    },
+    "a": "C"
+  },
+  {
+    "q": "A chemical balance is used for measuring",
+    "o": {
+      "A": "Mass",
+      "B": "Volume",
+      "C": "Density",
+      "D": "Temperature"
+    },
+    "a": "A"
+  },
+  {
+    "q": "When an elastic material is stretched by a force, the energy stored in it is",
+    "o": {
+      "A": "Kinetic energy",
+      "B": "Potential energy",
+      "C": "Elastic potential energy",
+      "D": "Thermal energy"
+    },
+    "a": "C"
+  },
+  {
+    "q": "Material that can be stretched and still return to the original form when the stresses are removed are said to be",
+    "o": {
+      "A": "Elastic",
+      "B": "Plastic",
+      "C": "Brittle",
+      "D": "Ductile"
+    },
+    "a": "A"
+  }
+
+
   ],
          
 
