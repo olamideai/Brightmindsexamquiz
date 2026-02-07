@@ -22,6 +22,449 @@ let quizCompleted = false;
 const QUESTION_BANK = {
 
 
+  "COS 101 (1)": [
+    {
+      "q": "What is a computer?",
+      "o": {
+        "A": "A mechanical tool for building houses",
+        "B": "An electronic device that processes data into information",
+        "C": "A storage unit only for physical files",
+        "D": "A device that only plays videos"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of the following is an input device?",
+      "o": {
+        "A": "Printer",
+        "B": "Monitor",
+        "C": "Keyboard",
+        "D": "Speaker"
+      },
+      "a": "C"
+    },
+    {
+      "q": "The basic operations performed by a computer are?",
+      "o": {
+        "A": "Arithmetic operations",
+        "B": "Logical operations",
+        "C": "Storage and retrieval",
+        "D": "All of the above"
+      },
+      "a": "D"
+    },
+    {
+      "q": "What does RAM stand for?",
+      "o": {
+        "A": "Read Access Memory",
+        "B": "Random Access Memory",
+        "C": "Real Analysis Memory",
+        "D": "Remote Access Memory"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of these is a secondary memory?",
+      "o": {
+        "A": "RAM",
+        "B": "Hard Disk",
+        "C": "CPU",
+        "D": "ROM"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The full form of CPU is?",
+      "o": {
+        "A": "Central Processing Unit",
+        "B": "Control Processing Unit",
+        "C": "Computer Power Unit",
+        "D": "Central Programming Unit"
+      },
+      "a": "A"
+    },
+    {
+      "q": "Which of these is an OS (Operating System)?",
+      "o": {
+        "A": "MS Word",
+        "B": "Chrome",
+        "C": "Games",
+        "D": "Windows"
+      },
+      "a": "D"
+    },
+    {
+      "q": "The smallest unit in a computer is?",
+      "o": {
+        "A": "Byte",
+        "B": "Kilo",
+        "C": "Bits",
+        "D": "Megabyte"
+      },
+      "a": "C"
+    },
+    {
+      "q": "Which device is used to convert a digital signal to information?",
+      "o": {
+        "A": "Modem",
+        "B": "Keyboard",
+        "C": "Mouse",
+        "D": "CPU"
+      },
+      "a": "A"
+    },
+    {
+      "q": "What is the primary use of an OS?",
+      "o": {
+        "A": "To make the computer look pretty",
+        "B": "To manage hardware and software resources",
+        "C": "To browse the internet only",
+        "D": "To perform mathematical calculations"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of these is volatile?",
+      "o": {
+        "A": "Hard Disk",
+        "B": "ROM",
+        "C": "RAM",
+        "D": "Hard Drive"
+      },
+      "a": "C"
+    },
+    {
+      "q": "The work of the ALU is?",
+      "o": {
+        "A": "To store data",
+        "B": "To perform arithmetic and logical operations",
+        "C": "To control the power supply",
+        "D": "To display images"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which generation of computer uses a vacuum tube?",
+      "o": {
+        "A": "First Generation",
+        "B": "Second Generation",
+        "C": "Third Generation",
+        "D": "Fourth Generation"
+      },
+      "a": "A"
+    },
+    {
+      "q": "What type of software is Microsoft PowerPoint?",
+      "o": {
+        "A": "System Software",
+        "B": "Application Software",
+        "C": "Operating System",
+        "D": "Utility Software"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which port is used to connect a printer to the computer?",
+      "o": {
+        "A": "VGA Port",
+        "B": "USB/Parallel Port",
+        "C": "PS/2 Port",
+        "D": "HDMI Port"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is a pixel?",
+      "o": {
+        "A": "A computer part",
+        "B": "The smallest controllable element of a picture on a screen",
+        "C": "A type of storage",
+        "D": "A programming language"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of these is not a web browser?",
+      "o": {
+        "A": "Chrome",
+        "B": "Firefox",
+        "C": "Photoshop",
+        "D": "Safari"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What does URL stand for?",
+      "o": {
+        "A": "Uniform Resource Locator",
+        "B": "United Resource Link",
+        "C": "Universal Radio Label",
+        "D": "Unit Resource Logic"
+      },
+      "a": "A"
+    },
+    {
+      "q": "Which of this is an example of malware?",
+      "o": {
+        "A": "Virus",
+        "B": "Firewall",
+        "C": "Firefox",
+        "D": "Antivirus"
+      },
+      "a": "A"
+    },
+    {
+      "q": "What is a firewall?",
+      "o": {
+        "A": "A physical wall to protect the CPU",
+        "B": "A security system that monitors and controls network traffic",
+        "C": "A type of cooling fan",
+        "D": "An antivirus software"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which device is used for uninterrupted power supply?",
+      "o": {
+        "A": "CPU",
+        "B": "UPS",
+        "C": "ALU",
+        "D": "RAM"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is a high-level programming language?",
+      "o": {
+        "A": "Python",
+        "B": "Windows",
+        "C": "Java",
+        "D": "Hard Drive"
+      },
+      "a": "A"
+    },
+    {
+      "q": "The meaning of HTTP is?",
+      "o": {
+        "A": "Hyperlink Text Transfer Protocol",
+        "B": "Hypertext Transfer Protocol",
+        "C": "Hypertext Technical Program",
+        "D": "High Transfer Text Protocol"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which unit measure is used to measure the processing speed of the CPU?",
+      "o": {
+        "A": "MB/s",
+        "B": "Gigahertz (GHz)",
+        "C": "GB",
+        "D": "DPI"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is a computer application?",
+      "o": {
+        "A": "A piece of hardware",
+        "B": "A program designed to perform a specific task for users",
+        "C": "The computer case",
+        "D": "A type of cable"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of these is not a type of printer?",
+      "o": {
+        "A": "LaserJet Printer",
+        "B": "Plotter",
+        "C": "Monitor",
+        "D": "Inkjet Printer"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is the purpose of the monitor?",
+      "o": {
+        "A": "To input data",
+        "B": "To display visual information",
+        "C": "To store files",
+        "D": "To print documents"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which device is used to generate input graphics?",
+      "o": {
+        "A": "Scanner",
+        "B": "Printer",
+        "C": "Mouse",
+        "D": "Monitor"
+      },
+      "a": "A"
+    },
+    {
+      "q": "What is the full form of PDF?",
+      "o": {
+        "A": "Personal Data File",
+        "B": "Portable Document Format",
+        "C": "Printable Digital File",
+        "D": "Portable Data Function"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of these is a computer network?",
+      "o": {
+        "A": "TCP",
+        "B": "LAN",
+        "C": "USB",
+        "D": "CPU"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the purpose of BIOS?",
+      "o": {
+        "A": "To edit photos",
+        "B": "To initialize hardware during the booting process",
+        "C": "To browse the web",
+        "D": "To cool down the processor"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which device is used to point and select?",
+      "o": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Monitor",
+        "D": "Speaker"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A folder is used to store files. Which of these is not a valid file extension?",
+      "o": {
+        "A": ".exe",
+        "B": ".doc",
+        "C": ".cpu",
+        "D": ".txt"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is the function of the motherboard?",
+      "o": {
+        "A": "To provide power to the monitor",
+        "B": "To serve as the main circuit board connecting all components",
+        "C": "To store the operating system permanently",
+        "D": "To print documents"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is a search engine?",
+      "o": {
+        "A": "Google",
+        "B": "AOL",
+        "C": "Microsoft",
+        "D": "All of the above"
+      },
+      "a": "A"
+    },
+    {
+      "q": "The purpose of a server is?",
+      "o": {
+        "A": "To play games",
+        "B": "To provide data or services to other computers in a network",
+        "C": "To act as a mouse",
+        "D": "To increase typing speed"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A device that enables online chat is a?",
+      "o": {
+        "A": "Webcam/Microphone",
+        "B": "Printer",
+        "C": "Scanner",
+        "D": "Hard Drive"
+      },
+      "a": "A"
+    },
+    {
+      "q": "The function of an IP address is?",
+      "o": {
+        "A": "To store passwords",
+        "B": "To uniquely identify a device on a network",
+        "C": "To speed up the internet",
+        "D": "To name a folder"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The purpose of a compiler is?",
+      "o": {
+        "A": "To write emails",
+        "B": "To translate high-level code into machine code",
+        "C": "To delete viruses",
+        "D": "To connect to the internet"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The function of ROM is?",
+      "o": {
+        "A": "To store temporary data",
+        "B": "To store permanent start-up instructions (Firmware)",
+        "C": "To display graphics",
+        "D": "To provide internet access"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What generation of computer uses an integrated circuit?",
+      "o": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is Cloud Computing?",
+      "o": {
+        "A": "Computing done in the sky",
+        "B": "Delivery of computing services over the internet",
+        "C": "A type of weather forecasting software",
+        "D": "Using a computer without a monitor"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which of these is a type of malware?",
+      "o": {
+        "A": "Trojan",
+        "B": "Anti-virus",
+        "C": "Firewall",
+        "D": "Chrome"
+      },
+      "a": "A"
+    },
+    {
+      "q": "What is the purpose of a device driver?",
+      "o": {
+        "A": "To drive a car",
+        "B": "To allow the OS to communicate with hardware devices",
+        "C": "To clean the hard drive",
+        "D": "To increase RAM speed"
+      },
+      "a": "B"
+    }
+  ],
+         
 
   "PHY 101.pdf": [
     {
@@ -2574,6 +3017,7 @@ const QUESTION_BANK = {
 };
 
 const SUBJECT_TIME = {
+  "COS 101 (1)": 60 * 13,
   "PHY 101.pdf": 60 * 15,
   "MTH 101 By Bro Waheed": 60 * 15,
   "GNS 113": 60 * 15,
