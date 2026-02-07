@@ -22,6 +22,451 @@ let quizCompleted = false;
 const QUESTION_BANK = {
 
 
+   
+  "COS 101 (2)": [
+    {
+      "q": "Which is not a type of computer?",
+      "o": {
+        "A": "Supercomputer",
+        "B": "Mainframe",
+        "C": "Windows",
+        "D": "Microcomputer"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is a database?",
+      "o": {
+        "A": "A place to keep base stations",
+        "B": "An organized collection of structured information or data",
+        "C": "A type of keyboard",
+        "D": "The computer's power supply"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is not a type of computer memory?",
+      "o": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Monitor",
+        "D": "Cache"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is the function of an Ethernet card?",
+      "o": {
+        "A": "To play sound",
+        "B": "To connect a computer to a wired network",
+        "C": "To capture video",
+        "D": "To store photos"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the purpose of a power supply unit?",
+      "o": {
+        "A": "To store data",
+        "B": "To convert mains AC to low-voltage regulated DC power for the computer",
+        "C": "To display the desktop",
+        "D": "To cool the CPU"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A device used to control games is a?",
+      "o": {
+        "A": "Joystick/Gamepad",
+        "B": "Scanner",
+        "C": "Printer",
+        "D": "Plotter"
+      },
+      "a": "A"
+    },
+    {
+      "q": "A network switch is used to?",
+      "o": {
+        "A": "Turn the computer on/off",
+        "B": "Connect multiple devices on a computer network",
+        "C": "Change the wallpaper",
+        "D": "Browse the web"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the purpose of virtual memory?",
+      "o": {
+        "A": "To make the monitor brighter",
+        "B": "To use hardware space as \"extra\" RAM when physical RAM is full",
+        "C": "To play virtual reality games",
+        "D": "To store files in the cloud"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What device is used for internet connection?",
+      "o": {
+        "A": "Printer",
+        "B": "Modem/Router",
+        "C": "Scanner",
+        "D": "Sound card"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A sound card is used to?",
+      "o": {
+        "A": "Store music files",
+        "B": "Input and output audio signals to/from a computer",
+        "C": "Increase the speed of the internet",
+        "D": "Connect a mouse"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is not a type of monitor?",
+      "o": {
+        "A": "LED",
+        "B": "CRT",
+        "C": "UPS",
+        "D": "LCD"
+      },
+      "a": "C"
+    },
+    {
+      "q": "The use of backup is to?",
+      "o": {
+        "A": "Speed up the computer",
+        "B": "Create a copy of data to recover it in case of loss",
+        "C": "Delete old files",
+        "D": "Update the OS"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is a type of computer file system?",
+      "o": {
+        "A": "NTFS / FAT32",
+        "B": "HTML",
+        "C": "MP3",
+        "D": "JPEG"
+      },
+      "a": "A"
+    },
+    {
+      "q": "What is the purpose of the taskbar?",
+      "o": {
+        "A": "To hide files",
+        "B": "To launch and monitor running applications",
+        "C": "To scan for viruses",
+        "D": "To type text"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the purpose of the heat sink?",
+      "o": {
+        "A": "To store data",
+        "B": "To dissipate heat away from the CPU",
+        "C": "To provide power",
+        "D": "To connect to the internet"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is not a type of computer user interface?",
+      "o": {
+        "A": "GUI",
+        "B": "CLI",
+        "C": "Apps",
+        "D": "Voice Interface"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is the purpose of the registry?",
+      "o": {
+        "A": "To list all users",
+        "B": "A database that stores configuration settings for the OS and apps",
+        "C": "To save documents",
+        "D": "To print files"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A device used for short-range wireless connection is?",
+      "o": {
+        "A": "Ethernet",
+        "B": "Bluetooth",
+        "C": "Fiber Optic",
+        "D": "Satellite"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the function of the CPU fan?",
+      "o": {
+        "A": "To blow dust onto the board",
+        "B": "To keep the CPU cool by pulling hot air away",
+        "C": "To speed up the hard drive",
+        "D": "To make the computer louder"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is not a type of computer case?",
+      "o": {
+        "A": "Tower",
+        "B": "Laptop",
+        "C": "Server",
+        "D": "Desktop"
+      },
+      "a": "C"
+    },
+    {
+      "q": "Which device is not a type of input/output device?",
+      "o": {
+        "A": "Mouse",
+        "B": "Monitor",
+        "C": "CPU",
+        "D": "Keyboard"
+      },
+      "a": "C"
+    },
+    {
+      "q": "Which is a type of computer battery?",
+      "o": {
+        "A": "CMOS",
+        "B": "RAM",
+        "C": "SSD",
+        "D": "ALU"
+      },
+      "a": "A"
+    },
+    {
+      "q": "A device used for network protection is?",
+      "o": {
+        "A": "Router",
+        "B": "Firewall",
+        "C": "Switch",
+        "D": "Hub"
+      },
+      "a": "B"
+    },
+    {
+      "q": "The function of a RAID system is to?",
+      "o": {
+        "A": "Increase internet speed",
+        "B": "Provide data redundancy and/or improve performance",
+        "C": "Clean the registry",
+        "D": "Connect to a printer"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is not a type of computer display RAM?",
+      "o": {
+        "A": "VRAM",
+        "B": "DRAM",
+        "C": "SRAM",
+        "D": "SDRAM"
+      },
+      "a": "C"
+    },
+    {
+      "q": "The purpose of system restore is to?",
+      "o": {
+        "A": "Delete all files",
+        "B": "Roll back system files and settings to an earlier point in time",
+        "C": "Reinstall the hardware",
+        "D": "Upgrade the RAM"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which is not a type of keyboard?",
+      "o": {
+        "A": "Mechanical",
+        "B": "Membrane",
+        "C": "Digital",
+        "D": "Ergonomic"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is the purpose of disk defragmentation?",
+      "o": {
+        "A": "To delete files",
+        "B": "To reorganize files so they are stored in contiguous blocks to improve speed",
+        "C": "To format the hard drive",
+        "D": "To check for viruses"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is a computer program?",
+      "o": {
+        "A": "A piece of hardware",
+        "B": "A collection of instructions that performs a specific task when executed",
+        "C": "The computer screen",
+        "D": "A user manual"
+      },
+      "a": "B"
+    },
+    {
+      "q": "A program used for software development is?",
+      "o": {
+        "A": "IDE (Integrated Development Environment)",
+        "B": "Media Player",
+        "C": "Browser",
+        "D": "Spreadsheet"
+      },
+      "a": "A"
+    },
+    {
+      "q": "Example of an interpreted language is?",
+      "o": {
+        "A": "C++",
+        "B": "Python",
+        "C": "Assembly",
+        "D": "COBOL"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is Firmware?",
+      "o": {
+        "A": "Permanent software programmed into a hardware device's read-only memory",
+        "B": "A soft sponge for cleaning computers",
+        "C": "A type of antivirus",
+        "D": "An update for MS Word"
+      },
+      "a": "A"
+    },
+    {
+      "q": "The purpose of an algorithm is to?",
+      "o": {
+        "A": "Provide a step-by-step procedure for solving a problem",
+        "B": "Calculate taxes only",
+        "C": "Store images",
+        "D": "Connect to a server"
+      },
+      "a": "A"
+    },
+    {
+      "q": "Example of cloud storage is?",
+      "o": {
+        "A": "Hard Drive",
+        "B": "Google Drive",
+        "C": "RAM",
+        "D": "Floppy Disk"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Accumulation of dust in the cooling fan causes?",
+      "o": {
+        "A": "Increased speed",
+        "B": "Overheating and potential system failure",
+        "C": "Better performance",
+        "D": "Less noise"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the full form of HTML?",
+      "o": {
+        "A": "Hypertext Markup Language",
+        "B": "High Transfer Machine Language",
+        "C": "Hyperlink Tool Management Line",
+        "D": "Home Tool Markup Language"
+      },
+      "a": "A"
+    },
+    {
+      "q": "What is an algorithm?",
+      "o": {
+        "A": "A mathematical formula only",
+        "B": "A set of rules to be followed in calculations or problem-solving",
+        "C": "A computer virus",
+        "D": "A type of hardware"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the difference between a compiler and an interpreter?",
+      "o": {
+        "A": "Compilers are slower",
+        "B": "Compilers translate the whole program at once, interpreters translate line-by-line",
+        "C": "Interpreters are only for hardware",
+        "D": "There is no difference"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the main function of the Arithmetic Logic Unit (ALU)?",
+      "o": {
+        "A": "To store data",
+        "B": "To perform mathematical and logical comparisons",
+        "C": "To control the mouse",
+        "D": "To manage the internet"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is a bus in a computer system?",
+      "o": {
+        "A": "A vehicle for transporting computers",
+        "B": "A communication system that transfers data between components",
+        "C": "A large storage unit",
+        "D": "A type of power cable"
+      },
+      "a": "B"
+    },
+    {
+      "q": "Which layer of the OSI Model is responsible for logical addressing (IP addresses)?",
+      "o": {
+        "A": "Physical Layer",
+        "B": "Data Link Layer",
+        "C": "Network Layer",
+        "D": "Transport Layer"
+      },
+      "a": "C"
+    },
+    {
+      "q": "What is the purpose of caching in a computer system?",
+      "o": {
+        "A": "To permanently store files",
+        "B": "To store frequently accessed data for faster retrieval",
+        "C": "To delete temporary files",
+        "D": "To scan for errors"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is data encapsulation in networking?",
+      "o": {
+        "A": "Deleting data",
+        "B": "Adding headers/trailers to data as it moves down the OSI layers",
+        "C": "Compressing files into a ZIP",
+        "D": "Password protecting a folder"
+      },
+      "a": "B"
+    },
+    {
+      "q": "What is the primary difference between Open Source and Proprietary software?",
+      "o": {
+        "A": "Open source is always free",
+        "B": "Open source source code is available to the public; Proprietary code is hidden/owned",
+        "C": "Proprietary software doesn't need an OS",
+        "D": "Open source is only for Linux"
+      },
+      "a": "B"
+    }
+  ],
+         
+
   "COS 101 (1)": [
     {
       "q": "What is a computer?",
@@ -3017,6 +3462,7 @@ const QUESTION_BANK = {
 };
 
 const SUBJECT_TIME = {
+  "COS 101 (2)": 60 * 13,
   "COS 101 (1)": 60 * 13,
   "PHY 101.pdf": 60 * 15,
   "MTH 101 By Bro Waheed": 60 * 15,
